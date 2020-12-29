@@ -47,10 +47,10 @@ if [ -z "$(dbxcli version 2>/dev/null)" ]; then
   echo "There's no dbxcli in the PATH or it's not accessible"
 fi
 
-echo "SOURCE_LOCAL_PATH: $SOURCE_LOCAL_PATH"
-echo "DROPBOX_DEST_PATH: $DROPBOX_DEST_PATH"
+# echo "SOURCE_LOCAL_PATH: $SOURCE_LOCAL_PATH"
+# echo "DROPBOX_DEST_PATH: $DROPBOX_DEST_PATH"
 
-# cd "$(dirname $SOURCE_LOCAL_PATH)"
+cd "$(dirname $SOURCE_LOCAL_PATH)"
 
 find "$(basename "$SOURCE_LOCAL_PATH")" -exec bash -c '
     if [ -d "{}" ]; then 
